@@ -7,6 +7,9 @@ export default function Home() {
   const { getCount } = useCursors();
   const count = getCount();
 
+  console.log("#$#$#$  HOME PAGE #$#$#");
+  
+
   return (
     <div className="w-full flex flex-col gap-8">
       <section className="bg-yellow-100 w-full p-2 rounded flex justify-center items-center text-xl">

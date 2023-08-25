@@ -17,6 +17,8 @@ export const revalidate = 0;
 
 export default async function RoomListPage() {
   // fetch rooms for server rendering with a GET request to the server
+  console.log(`#####partURL: ${partyUrl}#####`);
+
   const res = await fetch(partyUrl, { next: { revalidate: 0 } });
   const rooms = ((await res.json()) ?? []) as RoomInfo[];
 
