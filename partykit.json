@@ -1,6 +1,6 @@
 {
   "main": "party/main.ts",
-  "name": "partykit-nextjs-chat-template",
+  "name": "food-rabbit",
   "parties": {
     "chatroom": "party/chatRoom.ts",
     "chatrooms": "party/chatRooms.ts",
