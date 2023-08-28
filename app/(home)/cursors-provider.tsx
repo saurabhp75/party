@@ -6,6 +6,7 @@ import type { PartialCursor, CursorsMap } from "@/party/cursors";
 import ConnectionStatus from "@/app/components/ConnectionStatus";
 import { PARTYKIT_HOST } from "../env";
 
+
 type CursorsContextType = {
   others: CursorsMap;
   myCursor: PartialCursor | null;
@@ -14,6 +15,7 @@ type CursorsContextType = {
   getCount: () => number;
 };
 
+// Initialize context of a user
 export const CursorsContext = createContext<CursorsContextType>({
   others: {},
   myCursor: null,
@@ -27,12 +29,15 @@ export function useCursors() {
 }
 
 export default function CursorsProvider(props: { children: React.ReactNode }) {
+  // State of my context
   const [myCursor, setMyCursor] = useState<PartialCursor | null>(null);
+  // State of my id
   const [myId, setMyId] = useState<string | null>(null);
   const [dimensions, setDimensions] = useState<{
     width: number;
     height: number;
   }>({ width: 0, height: 0 });
+  // Map of context of others State key/id -> context
   const [others, setOthers] = useState<CursorsMap>({});
 
   const socket = usePartySocket({

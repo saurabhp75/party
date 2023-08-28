@@ -22,3 +22,6 @@ export default async function middleware(req: NextRequest) {
 
   return NextResponse.next();
 }
+
+// Not working
+// export const config = { matcher: ["/chat/:path*"] };

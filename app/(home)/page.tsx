@@ -7,8 +7,7 @@ export default function Home() {
   const { getCount } = useCursors();
   const count = getCount();
 
-  console.log("#$#$#$  HOME PAGE #$#$#");
-  
+  // console.log("#$#$#$  HOME PAGE #$#$#");
 
   return (
     <div className="w-full flex flex-col gap-8">
@@ -26,9 +25,6 @@ export default function Home() {
           <li>AI chatbots</li>
           <li>Sample client and party code for all of the above</li>
         </ul>
-        <p>
-          Check <code>README.md</code> for how to run this locally in 3 steps.
-        </p>
       </section>
 
       <Link href="/chat" className="underline">

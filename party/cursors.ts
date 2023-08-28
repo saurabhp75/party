@@ -6,11 +6,13 @@ export type PartialCursor = {
   pointer: "mouse" | "touch";
 };
 
+// One user
 export type Cursor = PartialCursor & {
   country: string | null;
   lastUpdate: number;
 };
 
+// Map of users
 export type CursorsMap = {
   [id: string]: Cursor;
 };

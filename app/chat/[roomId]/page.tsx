@@ -35,6 +35,7 @@ export default async function ChatRoomPage({
       </div>
       {room ? (
         <>
+          {/* <span>{ JSON.stringify(user)}</span> */}
           <div className="w-full flex flex-row justify-between items-start pb-6">
             <div>
               <h1 className="text-4xl font-medium">{params.roomId}</h1>
